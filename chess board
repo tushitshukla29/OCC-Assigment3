@@ -1,0 +1,28 @@
+package app;
+import java.awt.*;
+import java.applet.*;
+/* <applet code="ChessB" width=400 height=400>
+ </applet>
+*/
+public class ChessB extends Applet {
+ public void paint(Graphics g) {
+ int r,c,x,y;
+  for(x=2;x<10;x++) {
+	  for(y=0;y<8;y++) {
+		  r=100*x;
+		  c=100*y;
+		  if((x%2==0)&&(y%2==0)) {
+			  g.setColor(Color.white);
+		  }
+		  else if((x%2==1)&&(y%2==1)) {
+			  g.setColor(Color.white);
+		  }
+		  else
+			  g.setColor(Color.black);
+          g.fillRect(r,c,100,100);
+	  }
+  }
+  g.setColor(Color.black);
+  g.drawRect(200,0,800,800);
+ }
+}
